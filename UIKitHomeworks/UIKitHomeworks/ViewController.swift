@@ -8,10 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var additionButton: UIButton {
         let button = UIButton()
-        button.frame = CGRect(x: 100, y: 100, width: 150, height: 150)
+        button.frame = CGRect(x: 150, y: 150, width: 150, height: 150)
         button.setTitle("Сложение", for: .normal)
         button.backgroundColor = .black
         button.tintColor = .red
@@ -21,37 +21,56 @@ class ViewController: UIViewController {
     
     var guessButton: UIButton {
         let button = UIButton()
+        button.frame = CGRect(x: 150, y: 350, width: 150, height: 150)
+        button.setTitle("Угадайка", for: .normal)
         button.backgroundColor = .black
         button.tintColor = .red
+        button.addTarget(self, action: #selector(guessButtonTap), for: .touchUpInside)
         return button
     }
     
-    var fioLabel: UILabel {
-        let label = UILabel()
-        label.text = "Welcome, "
-        label.textAlignment = .center
-        return label
-    }
+    var fioLabel: UILabel!
     
-    var sumLabel: UILabel {
-        let label = UILabel()
-        label.isHidden = true
-        return label
-    }
+    var sumLabel: UILabel!
     
-    var guessLabel: UILabel {
-        let label = UILabel()
-        label.isHidden = true
-        return label
-    }
+    var guessLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(additionButton)
+        setupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupAlert()
+    }
+    
+    func setupView() {
+        
+        fioLabel = UILabel()
+        fioLabel.frame = CGRect(x: 100, y: 50, width: 200, height: 20)
+        fioLabel.text = "Welcome, "
+        fioLabel.textAlignment = .center
+        fioLabel.isHidden = true
+        
+        sumLabel = UILabel()
+        sumLabel.frame = CGRect(x: 100, y: 80, width: 200, height: 20)
+        sumLabel.textAlignment = .center
+        sumLabel.isHidden = true
+        
+        
+        guessLabel = UILabel()
+        guessLabel.frame = CGRect(x: 20, y: 110, width: 380, height: 20)
+        guessLabel.textAlignment = .center
+        guessLabel.isHidden = true
+        
+        
+        
+        self.view.addSubview(additionButton)
+        self.view.addSubview(guessButton)
+        self.view.addSubview(fioLabel)
+        self.view.addSubview(sumLabel)
+        self.view.addSubview(guessLabel)
     }
     
     
@@ -60,6 +79,7 @@ class ViewController: UIViewController {
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "Готово", style: .default) { (action) in
             self.fioLabel.text = "Welcome, \(alert.textFields?.first?.text ?? "")!"
+            self.fioLabel.isHidden = false
         })
         self.present(alert, animated: true, completion: nil)
     }
@@ -76,7 +96,7 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func guessButtonTup(_ sender: UIButton) {
+    @objc func guessButtonTap(_ sender: UIButton) {
         let alert = UIAlertController(title: "Угадай число", message: "Введите число от 1 до 10", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.addAction(UIAlertAction(title: "Угадать", style: .default, handler: { (action) in
