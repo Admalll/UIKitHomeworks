@@ -9,7 +9,6 @@ import UIKit
 
 class MessageView: UIView {
     
-    var controller: ViewController!
     let messageLabel = UILabel()
     let messageButton = UIButton()
     
