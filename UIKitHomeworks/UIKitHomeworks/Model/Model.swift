@@ -7,6 +7,8 @@
 
 import Foundation
 
+// 6 Нужно ввести "leohl" в Алерт нажимаете "ок" отдаете контролеру а контролер отдаст это в модель которая из буквосочетания "leohl" вернет слово "hello" контролеру а контролер отдаст это лейблу и отобразит это на экране
+
 class MessageModel {
     func returnMessage(message: String) -> String {
         switch message {

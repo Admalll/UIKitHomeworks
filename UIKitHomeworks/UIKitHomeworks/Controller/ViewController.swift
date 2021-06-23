@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         return model.returnMessage(message: message)
     }
     
+    // 5 Создать второе приложение MVC у которого на экране будет кнопка "начать" которая вызывает Алерт с сообщением "введите слово"
+    
     private func setupAlert() {
         let alert = UIAlertController(title: "Enter message", message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
