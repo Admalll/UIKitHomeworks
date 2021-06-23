@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // 1.Написать свое мини приложение на первом экране две кнопки "сложение" и "угадай число"
+    
     var additionButton: UIButton {
         let button = UIButton()
         button.frame = CGRect(x: 150, y: 150, width: 150, height: 150)
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
         setupAlert()
     }
     
+    
     func setupView() {
         
         fioLabel = UILabel()
@@ -73,6 +76,7 @@ class ViewController: UIViewController {
         self.view.addSubview(guessLabel)
     }
     
+    // 2 При попадании на этот экран запрашивать ФИО через алер и отображать в UILabel
     
     func setupAlert() {
         let alert = UIAlertController(title: "Введите ФИО", message: nil, preferredStyle: .alert)
@@ -83,6 +87,8 @@ class ViewController: UIViewController {
         })
         self.present(alert, animated: true, completion: nil)
     }
+    
+    // 3 По нажатию на "сложение" открывать Алерт который просит ввести число 1 и число 2 и кнопка посчитать выводит результат в любом виде юзеру
     
     @objc func additionButtonTap(_ sender: UIButton) {
         let alert = UIAlertController(title: "Сложение", message: "Введите числа", preferredStyle: .alert)
@@ -95,6 +101,8 @@ class ViewController: UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    // 4 При нажатии на кнопку "угадай число" нужно придумать игру где нужно угадать число
     
     @objc func guessButtonTap(_ sender: UIButton) {
         let alert = UIAlertController(title: "Угадай число", message: "Введите число от 1 до 10", preferredStyle: .alert)
