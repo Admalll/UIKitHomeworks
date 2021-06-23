@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AuthorizationViewController: UIViewController {
+    
+    let authView = AuthView()
+    
+    override func loadView() {
+        self.view = authView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
