@@ -13,7 +13,9 @@ class CafeViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
+    // 2.Создать второй экран Cafe где нужно регистрировать гостя поля для ввода фио и через свитчи была ли предоплата , заказывали ли стол (да или нет ) 3 Поля для ввода номера стола 4.Добавить третий экран счёт где выводим фио , номер стола и сумма 5 Добавить кнопку «выставить счёт» расположить на втором экране и по нажатию выкидывать Алерт продолжить да или нет, если нет то убираем Алерт если да то переходим на третий экран
+    
     @IBAction func orderButtonTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: "Выставить чек?", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

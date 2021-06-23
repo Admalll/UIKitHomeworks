@@ -10,7 +10,8 @@ import UIKit
 class AuthorizationViewController: UIViewController {
     
     let authView = AuthView()
-
+    let model = AuthModel()
+    
     
     override func loadView() {
         self.view = authView
@@ -23,9 +24,17 @@ class AuthorizationViewController: UIViewController {
 }
 
 extension AuthorizationViewController: AuthViewDelegate {
-    func authorizeHandling() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "CafeViewController")
-        self.navigationController?.pushViewController(secondVC, animated: true)
+    func authorizeHandling(login: String, password: String) {
+        
+        if model.authUser(login: login, password: password) {
+            
+            authView.authorizeSuccess()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let secondVC = storyboard.instantiateViewController(identifier: "CafeViewController")
+            self.navigationController?.pushViewController(secondVC, animated: true)
+        } else {
+            authView.authorizeError()
+        }
     }
 }

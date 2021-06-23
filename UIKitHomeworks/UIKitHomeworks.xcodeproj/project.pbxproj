@@ -16,6 +16,7 @@
 		F577EA0C2682FCC500910339 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA0B2682FCC500910339 /* AuthView.swift */; };
 		F577EA0F26834CAC00910339 /* CafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA0E26834CAC00910339 /* CafeViewController.swift */; };
 		F577EA1126834CB600910339 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA1026834CB600910339 /* OrderViewController.swift */; };
+		F577EA142683961A00910339 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA132683961A00910339 /* AuthModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F577EA0B2682FCC500910339 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		F577EA0E26834CAC00910339 /* CafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewController.swift; sourceTree = "<group>"; };
 		F577EA1026834CB600910339 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		F577EA132683961A00910339 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		F50616C82680D8040089998C /* UIKitHomeworks */ = {
 			isa = PBXGroup;
 			children = (
+				F577EA122683961000910339 /* AuthModel */,
 				F577EA0A2682FC7800910339 /* Views */,
 				F50616C92680D8040089998C /* AppDelegate.swift */,
 				F50616CB2680D8040089998C /* SceneDelegate.swift */,
@@ -90,6 +93,14 @@
 				F577EA1026834CB600910339 /* OrderViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F577EA122683961000910339 /* AuthModel */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA132683961A00910339 /* AuthModel.swift */,
+			);
+			path = AuthModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			files = (
 				F577EA0F26834CAC00910339 /* CafeViewController.swift in Sources */,
 				F50616CE2680D8040089998C /* AuthorizationViewController.swift in Sources */,
+				F577EA142683961A00910339 /* AuthModel.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F577EA0C2682FCC500910339 /* AuthView.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,

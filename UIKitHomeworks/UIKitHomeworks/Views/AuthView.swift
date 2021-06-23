@@ -20,9 +20,11 @@ class AuthView: UIView {
     let emailTextfield = UITextField()
     let passwordTextfield = UITextField()
     let authorizeButton = UIButton()
+    let authLabelResult = UILabel()
     
     
     //1 Создать экран регистрации где нужно ввести логин и пароль 2 поля и кнопка вход которая ведёт на второй экран
+    
     private func setupView() {
         
         self.backgroundColor = .white
@@ -89,6 +91,12 @@ class AuthView: UIView {
         eyeButton.setImage(UIImage(imageLiteralResourceName: "eye"), for: .normal)
         eyeButton.addTarget(self, action: #selector(tooglePassword), for: .touchUpInside)
         
+        self.addSubview(authLabelResult)
+        authLabelResult.frame = CGRect(x: 100, y: 500, width: 290, height: 30)
+        authLabelResult.isHidden = true
+        authLabelResult.textColor = .red
+        authLabelResult.font = UIFont.boldSystemFont(ofSize: 16)
+        
     }
     
     @objc private func tooglePassword() {
@@ -96,7 +104,19 @@ class AuthView: UIView {
     }
     
     @objc private func authorizeButtonTap() {
-        delegate?.authorizeHandling()
+        
+        guard let login = emailTextfield.text else { return }
+        guard let password = passwordTextfield.text else { return }
+        delegate?.authorizeHandling(login: login, password: password)
+    }
+    
+    func authorizeSuccess() {
+        authLabelResult.isHidden = true
+    }
+    
+    func authorizeError() {
+        authLabelResult.text = "Пользователь не найден!"
+        authLabelResult.isHidden = false
     }
     
     override init(frame: CGRect) {
@@ -112,5 +132,6 @@ class AuthView: UIView {
 
 protocol AuthViewDelegate: AnyObject {
 
-    func authorizeHandling()
+    func authorizeHandling(login: String, password: String)
+    
 }
