@@ -9,6 +9,9 @@ import UIKit
 
 class AuthView: UIView {
     
+    weak var delegate: AuthViewDelegate?
+    
+    let eyeButton = UIButton()
     let appleImage = UIImageView()
     let appleLabel = UILabel()
     let signinLabel = UILabel()
@@ -18,6 +21,8 @@ class AuthView: UIView {
     let passwordTextfield = UITextField()
     let authorizeButton = UIButton()
     
+    
+    //1 Создать экран регистрации где нужно ввести логин и пароль 2 поля и кнопка вход которая ведёт на второй экран
     private func setupView() {
         
         self.backgroundColor = .white
@@ -77,7 +82,21 @@ class AuthView: UIView {
         authorizeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         authorizeButton.tintColor = .white
         authorizeButton.layer.cornerRadius = 5
+        authorizeButton.addTarget(self, action: #selector(authorizeButtonTap), for: .touchUpInside)
         
+        self.addSubview(eyeButton)
+        eyeButton.frame = CGRect(x: 360, y: 430, width: 25, height: 30)
+        eyeButton.setImage(UIImage(imageLiteralResourceName: "eye"), for: .normal)
+        eyeButton.addTarget(self, action: #selector(tooglePassword), for: .touchUpInside)
+        
+    }
+    
+    @objc private func tooglePassword() {
+        passwordTextfield.isSecureTextEntry.toggle()
+    }
+    
+    @objc private func authorizeButtonTap() {
+        delegate?.authorizeHandling()
     }
     
     override init(frame: CGRect) {
@@ -88,4 +107,10 @@ class AuthView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+
+protocol AuthViewDelegate: AnyObject {
+
+    func authorizeHandling()
 }
