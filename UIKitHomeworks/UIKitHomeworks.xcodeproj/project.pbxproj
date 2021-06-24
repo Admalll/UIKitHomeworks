@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		F50616CA2680D8040089998C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616C92680D8040089998C /* AppDelegate.swift */; };
 		F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CB2680D8040089998C /* SceneDelegate.swift */; };
-		F50616CE2680D8040089998C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* ViewController.swift */; };
+		F50616CE2680D8040089998C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* AuthViewController.swift */; };
 		F50616D12680D8040089998C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616CF2680D8040089998C /* Main.storyboard */; };
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
+		F577EA192684733500910339 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA182684733500910339 /* AuthView.swift */; };
+		F577EA1B268488D000910339 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA1A268488D000910339 /* AuthModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F50616C62680D8040089998C /* UIKitHomeworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitHomeworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50616C92680D8040089998C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50616CB2680D8040089998C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50616CD2680D8040089998C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50616CD2680D8040089998C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F50616D02680D8040089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50616D22680D8070089998C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F577EA182684733500910339 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		F577EA1A268488D000910339 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		F50616C82680D8040089998C /* UIKitHomeworks */ = {
 			isa = PBXGroup;
 			children = (
+				F577EA17268472CF00910339 /* Models */,
+				F577EA16268472C800910339 /* Controllers */,
+				F577EA15268472BE00910339 /* Views */,
 				F50616C92680D8040089998C /* AppDelegate.swift */,
 				F50616CB2680D8040089998C /* SceneDelegate.swift */,
-				F50616CD2680D8040089998C /* ViewController.swift */,
 				F50616CF2680D8040089998C /* Main.storyboard */,
 				F50616D22680D8070089998C /* Assets.xcassets */,
 				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
 				F50616D72680D8070089998C /* Info.plist */,
 			);
 			path = UIKitHomeworks;
+			sourceTree = "<group>";
+		};
+		F577EA15268472BE00910339 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA182684733500910339 /* AuthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F577EA16268472C800910339 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F50616CD2680D8040089998C /* AuthViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F577EA17268472CF00910339 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA1A268488D000910339 /* AuthModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50616CE2680D8040089998C /* ViewController.swift in Sources */,
+				F50616CE2680D8040089998C /* AuthViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
+				F577EA192684733500910339 /* AuthView.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
+				F577EA1B268488D000910339 /* AuthModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
