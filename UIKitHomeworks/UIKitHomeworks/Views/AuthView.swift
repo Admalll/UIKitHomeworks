@@ -9,6 +9,8 @@ import UIKit
 
 class AuthView: UIView {
     
+    // 1 Создать экран регистрации где нужно ввести логин и пароль 2 поля и кнопка вход которая ведёт на второй экран.
+    
     weak var delegate: AuthViewDelegate?
     let logoLabel = UILabel()
     let signinLabel = UILabel()
@@ -75,7 +77,9 @@ class AuthView: UIView {
         
         self.addSubview(eyeButton)
         eyeButton.frame = CGRect(x: 360, y: 425, width: 30, height: 30)
-        eyeButton.setImage(UIImage(imageLiteralResourceName: "eye.fill"), for: .normal)
+        let image = UIImage(systemName: "eye.fill")
+        let colorImage = image?.withTintColor(.gray, renderingMode: .alwaysOriginal)
+        eyeButton.setImage(colorImage, for: .normal)
         eyeButton.addTarget(self, action: #selector(securePassword), for: .touchUpInside)
         
         self.addSubview(faceidLabel)
@@ -99,6 +103,8 @@ class AuthView: UIView {
         loginButton.addTarget(self, action: #selector(authorize), for: .touchUpInside)
     }
     
+    // 4 Опционально для тех, кто не почуствовал задания и для тех кто хочет расти как крутой программист: * При нажатии на кнопку с глазом на первом экране должен показываться пароль из второго поля вместо точек.
+    
     @objc func securePassword() {
         passwordTextfield.isSecureTextEntry.toggle()
     }
@@ -106,10 +112,6 @@ class AuthView: UIView {
     @objc func authorize() {
         guard let login = emailTextfield.text, let password = passwordTextfield.text else { return }
         delegate?.authorize(login: login, password: password)
-    }
-    
-    func authSuccess() {
-        
     }
     
     override init(frame: CGRect) {

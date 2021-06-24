@@ -15,6 +15,12 @@
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
 		F577EA192684733500910339 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA182684733500910339 /* AuthView.swift */; };
 		F577EA1B268488D000910339 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA1A268488D000910339 /* AuthModel.swift */; };
+		F577EA1D26848EF600910339 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA1C26848EF600910339 /* ContactsViewController.swift */; };
+		F577EA1F268491D400910339 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA1E268491D400910339 /* ContactsView.swift */; };
+		F577EA212684A46500910339 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA202684A46400910339 /* AddContactViewController.swift */; };
+		F577EA232684A47100910339 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA222684A47100910339 /* AddContactView.swift */; };
+		F577EA252684FC9A00910339 /* UISexPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA242684FC9A00910339 /* UISexPickerTextField.swift */; };
+		F577EA282685011200910339 /* UIAgePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA272685011200910339 /* UIAgePickerTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F577EA182684733500910339 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		F577EA1A268488D000910339 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		F577EA1C26848EF600910339 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		F577EA1E268491D400910339 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		F577EA202684A46400910339 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		F577EA222684A47100910339 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		F577EA242684FC9A00910339 /* UISexPickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISexPickerTextField.swift; sourceTree = "<group>"; };
+		F577EA272685011200910339 /* UIAgePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAgePickerTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				F577EA182684733500910339 /* AuthView.swift */,
+				F577EA1E268491D400910339 /* ContactsView.swift */,
+				F577EA222684A47100910339 /* AddContactView.swift */,
+				F577EA262684FE2E00910339 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				F50616CD2680D8040089998C /* AuthViewController.swift */,
+				F577EA1C26848EF600910339 /* ContactsViewController.swift */,
+				F577EA202684A46400910339 /* AddContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +112,15 @@
 				F577EA1A268488D000910339 /* AuthModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F577EA262684FE2E00910339 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA242684FC9A00910339 /* UISexPickerTextField.swift */,
+				F577EA272685011200910339 /* UIAgePickerTextField.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +195,15 @@
 			files = (
 				F50616CE2680D8040089998C /* AuthViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
+				F577EA232684A47100910339 /* AddContactView.swift in Sources */,
+				F577EA252684FC9A00910339 /* UISexPickerTextField.swift in Sources */,
 				F577EA192684733500910339 /* AuthView.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
 				F577EA1B268488D000910339 /* AuthModel.swift in Sources */,
+				F577EA212684A46500910339 /* AddContactViewController.swift in Sources */,
+				F577EA1D26848EF600910339 /* ContactsViewController.swift in Sources */,
+				F577EA1F268491D400910339 /* ContactsView.swift in Sources */,
+				F577EA282685011200910339 /* UIAgePickerTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
