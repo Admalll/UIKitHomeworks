@@ -10,6 +10,8 @@ import AVFoundation
 
 class PlayerViewController: UIViewController {
     
+    // 3 На втором экране создаем UI точно такой же, как указан на картинке второго экрана, при этом работает кнопка пауза и плей (должна воспроизводить песню и ставить на паузу), слайдер должен показывать реальное время проигрывания, при перетаскивании слайдера перематывается песня
+    
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var durationSlider: UISlider!
@@ -46,6 +48,8 @@ class PlayerViewController: UIViewController {
         durationSlider.setThumbImage(UIImage(systemName: "airplane")?.withTintColor(.systemGray, renderingMode: .alwaysOriginal), for: .normal)
     }
     
+    // 4 Время песни над слайдером реальное
+    
     @objc func updateDurationSlider() {
         durationSlider.value = Float(player.currentTime)
         startSongTime.text = player.currentTime.stringFromTimeInterval()
@@ -69,14 +73,20 @@ class PlayerViewController: UIViewController {
         }
     }
     
+    // 10 По нажатию на левую стрелочку вверху экрана закрыть этот экран
+    
     @IBAction func closeButtonTap(_ sender: UIButton) {
         player.stop()
         self.dismiss(animated: true, completion: nil)
     }
     
+    // 7 Добавить громкость и переключение между двумя песнями
+    
     @IBAction func volumeSliderChanged(_ sender: UISlider) {
         self.player.volume = self.volumeSlider.value
     }
+    
+    // 9 Добавить функционал для кнопки share (UIActivityController) (заменить картинку бургеры в правом верхнем углу на кнопку share)
     
     @IBAction func shareButtonTap(_ sender: UIButton) {
         let ac = UIActivityViewController(activityItems: [songName], applicationActivities: nil)
