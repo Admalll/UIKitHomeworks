@@ -103,6 +103,7 @@ class PlayerViewController: UIViewController {
             guard let audioPath = Bundle.main.path(forResource: songName, ofType: songType) else { return }
             try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
             setupPlayerView()
+            songPlaying = false
             UIView.transition(with: self.songImageView,
                               duration: 1.0,
                               options: .transitionFlipFromLeft,
