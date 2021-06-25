@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		F50616CA2680D8040089998C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616C92680D8040089998C /* AppDelegate.swift */; };
 		F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CB2680D8040089998C /* SceneDelegate.swift */; };
-		F50616CE2680D8040089998C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* ViewController.swift */; };
+		F50616CE2680D8040089998C /* MusicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* MusicsViewController.swift */; };
 		F50616D12680D8040089998C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616CF2680D8040089998C /* Main.storyboard */; };
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
+		F577EA2A2685B59F00910339 /* SimpleDimple.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F577EA292685B59F00910339 /* SimpleDimple.mp3 */; };
+		F577EA2D2685C6B600910339 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA2C2685C6B600910339 /* PlayerViewController.swift */; };
+		F577EA322685FE8A00910339 /* СимплДимпл.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F577EA312685FE8A00910339 /* СимплДимпл.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F50616C62680D8040089998C /* UIKitHomeworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitHomeworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50616C92680D8040089998C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50616CB2680D8040089998C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50616CD2680D8040089998C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50616CD2680D8040089998C /* MusicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsViewController.swift; sourceTree = "<group>"; };
 		F50616D02680D8040089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50616D22680D8070089998C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F577EA292685B59F00910339 /* SimpleDimple.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SimpleDimple.mp3; path = ../../../../Desktop/SimpleDimple.mp3; sourceTree = "<group>"; };
+		F577EA2C2685C6B600910339 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		F577EA312685FE8A00910339 /* СимплДимпл.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "СимплДимпл.mp3"; path = "../../../../Downloads/СимплДимпл.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,24 @@
 			children = (
 				F50616C92680D8040089998C /* AppDelegate.swift */,
 				F50616CB2680D8040089998C /* SceneDelegate.swift */,
-				F50616CD2680D8040089998C /* ViewController.swift */,
+				F577EA2B2685C6A400910339 /* Controllers */,
 				F50616CF2680D8040089998C /* Main.storyboard */,
+				F577EA292685B59F00910339 /* SimpleDimple.mp3 */,
+				F577EA312685FE8A00910339 /* СимплДимпл.mp3 */,
 				F50616D22680D8070089998C /* Assets.xcassets */,
 				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
 				F50616D72680D8070089998C /* Info.plist */,
 			);
 			path = UIKitHomeworks;
+			sourceTree = "<group>";
+		};
+		F577EA2B2685C6A400910339 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F50616CD2680D8040089998C /* MusicsViewController.swift */,
+				F577EA2C2685C6B600910339 /* PlayerViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +144,8 @@
 				F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */,
 				F50616D32680D8070089998C /* Assets.xcassets in Resources */,
 				F50616D12680D8040089998C /* Main.storyboard in Resources */,
+				F577EA322685FE8A00910339 /* СимплДимпл.mp3 in Resources */,
+				F577EA2A2685B59F00910339 /* SimpleDimple.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50616CE2680D8040089998C /* ViewController.swift in Sources */,
+				F50616CE2680D8040089998C /* MusicsViewController.swift in Sources */,
+				F577EA2D2685C6B600910339 /* PlayerViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
 			);
