@@ -15,6 +15,7 @@
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
 		F577EA2A2685B59F00910339 /* SimpleDimple.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F577EA292685B59F00910339 /* SimpleDimple.mp3 */; };
 		F577EA2D2685C6B600910339 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA2C2685C6B600910339 /* PlayerViewController.swift */; };
+		F577EA322685FE8A00910339 /* СимплДимпл.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F577EA312685FE8A00910339 /* СимплДимпл.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F577EA292685B59F00910339 /* SimpleDimple.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SimpleDimple.mp3; path = ../../../../Desktop/SimpleDimple.mp3; sourceTree = "<group>"; };
 		F577EA2C2685C6B600910339 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		F577EA312685FE8A00910339 /* СимплДимпл.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "СимплДимпл.mp3"; path = "../../../../Downloads/СимплДимпл.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				F577EA2B2685C6A400910339 /* Controllers */,
 				F50616CF2680D8040089998C /* Main.storyboard */,
 				F577EA292685B59F00910339 /* SimpleDimple.mp3 */,
+				F577EA312685FE8A00910339 /* СимплДимпл.mp3 */,
 				F50616D22680D8070089998C /* Assets.xcassets */,
 				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
 				F50616D72680D8070089998C /* Info.plist */,
@@ -141,6 +144,7 @@
 				F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */,
 				F50616D32680D8070089998C /* Assets.xcassets in Resources */,
 				F50616D12680D8040089998C /* Main.storyboard in Resources */,
+				F577EA322685FE8A00910339 /* СимплДимпл.mp3 in Resources */,
 				F577EA2A2685B59F00910339 /* SimpleDimple.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
