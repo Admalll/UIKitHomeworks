@@ -46,6 +46,7 @@ class ItemsViewController: UIViewController {
         firstUIView.backgroundColor = .white
         firstUIView.frame = CGRect(x: 40, y: 250, width: 170, height: 250)
         firstUIView.layer.cornerRadius = 10
+        firstUIView.isUserInteractionEnabled = true
         
         self.view.addSubview(firstImageView)
         firstImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -56,6 +57,7 @@ class ItemsViewController: UIViewController {
         secondUIView.backgroundColor = .white
         secondUIView.frame = CGRect(x: 230, y: 250, width: 170, height: 250)
         secondUIView.layer.cornerRadius = 10
+        secondUIView.isUserInteractionEnabled = true
         
         self.view.addSubview(secondImageView)
         secondImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -66,6 +68,7 @@ class ItemsViewController: UIViewController {
         thirdUIView.backgroundColor = .white
         thirdUIView.frame = CGRect(x: 40, y: 520, width: 170, height: 250)
         thirdUIView.layer.cornerRadius = 10
+        thirdUIView.isUserInteractionEnabled = true
         
         self.view.addSubview(thirdImageView)
         thirdImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -76,6 +79,7 @@ class ItemsViewController: UIViewController {
         fourthUIView.backgroundColor = .white
         fourthUIView.frame = CGRect(x: 230, y: 520, width: 170, height: 250)
         fourthUIView.layer.cornerRadius = 10
+        fourthImageView.isUserInteractionEnabled = true
         
         self.view.addSubview(fourthImageView)
         fourthImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -93,6 +97,7 @@ class ItemsViewController: UIViewController {
         sortButton.setTitle("Sort by", for: .normal)
         sortButton.setTitleColor(.gray, for: .normal)
         sortButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 90, bottom: 0, right: 0)
+        
         
     }
     
