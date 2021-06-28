@@ -28,7 +28,7 @@ class DetailsViewController: UIViewController {
         self.view.backgroundColor = .white
         
         self.view.addSubview(itemImage)
-        itemImage.image = UIImage(named: "First" + selectedItem)
+        itemImage.image = UIImage(named: selectedItem)
         itemImage.frame = CGRect(x: 0, y: 0, width: 450, height: 300)
         itemImage.center = self.view.center
         

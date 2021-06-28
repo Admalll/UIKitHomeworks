@@ -14,7 +14,9 @@ class BusketViewController: UIViewController {
     let itemLabel = UILabel()
     let itemImage = UIImageView()
     let totalPrice = UILabel()
-    let shipmentTextfield = UITextField()
+    let shipmentTextfield = UIShipmentPicker()
+    let chooseShipmentLabel = UILabel()
+    let totalPriceLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,19 +34,28 @@ class BusketViewController: UIViewController {
         itemLabel.font = UIFont.boldSystemFont(ofSize: 21)
         
         self.view.addSubview(itemImage)
-        itemImage.image = UIImage(named: "First" + itemName)
+        itemImage.image = UIImage(named: itemName)
         itemImage.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
         itemImage.center = view.center
         
         self.view.addSubview(shipmentTextfield)
-        shipmentTextfield.placeholder = "Choose shipment"
         shipmentTextfield.frame = CGRect(x: 80, y: 650, width: 300, height: 30)
         shipmentTextfield.font = UIFont.boldSystemFont(ofSize: 21)
         
+        self.view.addSubview(totalPriceLabel)
+        totalPriceLabel.text = "Total price in Rubles"
+        totalPriceLabel.frame = CGRect(x: 80, y: 700, width: 300, height: 30)
+        totalPriceLabel.font = UIFont.boldSystemFont(ofSize: 25)
+        
         self.view.addSubview(totalPrice)
-        totalPrice.text = "Total price: \(Double(itemCount!)! * 99999) Rubles"
+        totalPrice.text = "\(Double(itemCount!)! * 99999)"
         totalPrice.frame = CGRect(x: 80, y: 750, width: 300, height: 30)
         totalPrice.font = UIFont.boldSystemFont(ofSize: 21)
+        
+        self.view.addSubview(chooseShipmentLabel)
+        chooseShipmentLabel.text = "Shipment type"
+        chooseShipmentLabel.frame = CGRect(x: 80, y: 600, width: 300, height: 30)
+        chooseShipmentLabel.font = UIFont.boldSystemFont(ofSize: 25)
         
     }
 
