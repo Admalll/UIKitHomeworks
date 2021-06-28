@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = ItemsViewController()
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
-        nav.navigationBar.barTintColor = .white
+        nav.navigationBar.barTintColor = .systemGray6
         nav.navigationBar.shadowImage = UIImage()
     }
 

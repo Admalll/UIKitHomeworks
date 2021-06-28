@@ -14,6 +14,7 @@
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
 		F577EA342689D34F00910339 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA332689D34F00910339 /* DetailsViewController.swift */; };
+		F577EA362689DE0900910339 /* BusketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA352689DE0900910339 /* BusketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F577EA332689D34F00910339 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F577EA352689DE0900910339 /* BusketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F50616CB2680D8040089998C /* SceneDelegate.swift */,
 				F50616CD2680D8040089998C /* ItemsViewController.swift */,
 				F577EA332689D34F00910339 /* DetailsViewController.swift */,
+				F577EA352689DE0900910339 /* BusketViewController.swift */,
 				F50616CF2680D8040089998C /* Main.storyboard */,
 				F50616D22680D8070089998C /* Assets.xcassets */,
 				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				F577EA342689D34F00910339 /* DetailsViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
+				F577EA362689DE0900910339 /* BusketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

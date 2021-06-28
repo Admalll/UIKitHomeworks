@@ -47,6 +47,8 @@ class ItemsViewController: UIViewController {
         firstUIView.frame = CGRect(x: 40, y: 250, width: 170, height: 250)
         firstUIView.layer.cornerRadius = 10
         firstUIView.isUserInteractionEnabled = true
+        let firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(uiviewTapped))
+        firstUIView.addGestureRecognizer(firstGestureRecognizer)
         
         self.view.addSubview(firstImageView)
         firstImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -58,6 +60,8 @@ class ItemsViewController: UIViewController {
         secondUIView.frame = CGRect(x: 230, y: 250, width: 170, height: 250)
         secondUIView.layer.cornerRadius = 10
         secondUIView.isUserInteractionEnabled = true
+        let secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(uiviewTapped))
+        secondUIView.addGestureRecognizer(secondGestureRecognizer)
         
         self.view.addSubview(secondImageView)
         secondImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -69,6 +73,8 @@ class ItemsViewController: UIViewController {
         thirdUIView.frame = CGRect(x: 40, y: 520, width: 170, height: 250)
         thirdUIView.layer.cornerRadius = 10
         thirdUIView.isUserInteractionEnabled = true
+        let thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(uiviewTapped))
+        thirdUIView.addGestureRecognizer(thirdGestureRecognizer)
         
         self.view.addSubview(thirdImageView)
         thirdImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -80,6 +86,8 @@ class ItemsViewController: UIViewController {
         fourthUIView.frame = CGRect(x: 230, y: 520, width: 170, height: 250)
         fourthUIView.layer.cornerRadius = 10
         fourthImageView.isUserInteractionEnabled = true
+        let fourthGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(uiviewTapped))
+        fourthUIView.addGestureRecognizer(fourthGestureRecognizer)
         
         self.view.addSubview(fourthImageView)
         fourthImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 100)
@@ -99,6 +107,13 @@ class ItemsViewController: UIViewController {
         sortButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 90, bottom: 0, right: 0)
         
         
+    }
+    
+    @objc func uiviewTapped() {
+        let currentItem = itemsMenuArray[itemsSegmentedControl.selectedSegmentIndex]
+        let vc = DetailsViewController()
+        vc.selectedItem = currentItem
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func changevalue(target: UISegmentedControl) {
