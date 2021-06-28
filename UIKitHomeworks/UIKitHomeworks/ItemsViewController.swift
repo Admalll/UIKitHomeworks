@@ -78,7 +78,6 @@ class ItemsViewController: UIViewController {
         thirdUIView.isUserInteractionEnabled = true
         let thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(thirdUiviewTapped))
         thirdUIView.addGestureRecognizer(thirdGestureRecognizer)
-        
         self.view.addSubview(thirdImageView)
         
         self.view.addSubview(fourthUIView)
@@ -88,7 +87,6 @@ class ItemsViewController: UIViewController {
         fourthImageView.isUserInteractionEnabled = true
         let fourthGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(fourthUiviewTapped))
         fourthUIView.addGestureRecognizer(fourthGestureRecognizer)
-        
         self.view.addSubview(fourthImageView)
         setImages(index: 0)
         
