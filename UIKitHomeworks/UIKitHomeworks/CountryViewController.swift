@@ -9,9 +9,16 @@ import UIKit
 
 class CountryViewController: UIViewController {
     
-    let countries = ["🇷🇺 Россия", "🇧🇾 Беларусь", "🇬🇧 Великобритания", "🇩🇪 Германия", "🇰🇿 Казахстан", "🇰🇬 Кыргызстан", "🇱🇹 Лива", "🇳🇬 Нигерия", "🇷🇴 Румыния", "🇸🇮 Словения", "🇺🇿 Узбекистан", "🇪🇪 Эстония"]
+    //MARK: - Visual components
+    
     let countriesTable = UITableView()
     let titleLabel = UILabel()
+    
+    //MARK: - Public properties
+    
+    let countries = ["🇷🇺 Россия", "🇧🇾 Беларусь", "🇬🇧 Великобритания", "🇩🇪 Германия", "🇰🇿 Казахстан", "🇰🇬 Кыргызстан", "🇱🇹 Лива", "🇳🇬 Нигерия", "🇷🇴 Румыния", "🇸🇮 Словения", "🇺🇿 Узбекистан", "🇪🇪 Эстония"]
+    
+    //MARK: - UIViewController(CountryViewController)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +32,8 @@ class CountryViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
+    
+    //MARK: - Public methods
     
     func setupView() {
         self.view.backgroundColor = .white
@@ -43,6 +52,8 @@ class CountryViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+//MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension CountryViewController: UITableViewDataSource, UITableViewDelegate {
     

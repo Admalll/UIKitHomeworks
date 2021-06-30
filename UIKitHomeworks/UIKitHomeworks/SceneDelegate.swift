@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         window?.windowScene = windowsScene
         window?.makeKeyAndVisible()
-        //let vc = CountryViewController()
-        let vc = MenuViewController()
+        let vc = CountryViewController()
+        //let vc = PizzaViewController()
         let nav = UINavigationController(rootViewController: vc)
         window?.rootViewController = nav
     }

@@ -9,6 +9,8 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    //MARK: - Visual components
+    
     let countryLabel = UILabel()
     let shipmentUIView = UIView()
     let shipmentSegment = UISegmentedControl(items: ["На доставку", "В зале"])
@@ -16,6 +18,8 @@ class MenuViewController: UIViewController {
     let advertismentImage = UIImageView()
     let pizzaImage = UIImageView()
     let sushiImage = UIImageView()
+    
+    //MARK: - UIViewController(MenuViewController)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +28,17 @@ class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.barTintColor = .systemGray6
+        self.title = "Food"
         self.navigationItem.hidesBackButton = true
-        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    //MARK: - Public methods
     
     func setupView() {
         self.view.backgroundColor = .white
@@ -71,7 +82,7 @@ class MenuViewController: UIViewController {
         pizzaImage.addSubview(pizzaLabel)
         pizzaLabel.frame = CGRect(x: 160, y: 25, width: 100, height: 50)
         pizzaImage.isUserInteractionEnabled = true
-        let pizzaGesture = UIGestureRecognizer(target: self, action: #selector(pizzaTap))
+        let pizzaGesture = UITapGestureRecognizer(target: self, action: #selector(pizzaTap))
         pizzaImage.addGestureRecognizer(pizzaGesture)
         
         self.view.addSubview(sushiImage)
@@ -87,7 +98,8 @@ class MenuViewController: UIViewController {
     }
     
     @objc func pizzaTap() {
-        print(1)
+        let vc = PizzaViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
