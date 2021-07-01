@@ -9,6 +9,8 @@ import UIKit
 
 class DetailsPizzaViewController: UIViewController {
     
+    // 4. Передаем картинку и название пиццы с предыдущего экрана, делаем ингредиенты и свитчи, при нажатии на кнопку выбрать переходим на экран оплаты (отображаем в полный экран)
+    
     //MARK: - Visual components
     
     let pizzaImageView = UIImageView()

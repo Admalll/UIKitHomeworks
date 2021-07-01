@@ -9,6 +9,8 @@ import UIKit
 
 class OplataViewController: UIViewController {
     
+    // 5. Создать экран оплаты, на котором необходимо спрятать Navigation Bar, а вместо него добавить заголовок оплата, отображаем пиццу и выбранные ингридиенты с предыдущего экрана , добавить выбор способа оплаты (если выбираем наличные отключается свитч оплата картой и наборот)
+    
     //MARK: - Public properties
     
     var isCheese = false {
@@ -174,6 +176,8 @@ class OplataViewController: UIViewController {
             perecPriceLabel.text = "Без добавления перца"
         }
     }
+    
+    // 6. При нажатии на кнопку оплаты показываем алерт об успешной оплате заказа, при нажатии на кнопку ОК мы переходим на экран выбора еды (второй после экрана авторизации)
     
     @objc func buyButtonTap(sender: UIButton) {
         let alert = UIAlertController(title: "Заказ оплачен", message: "Ваш заказ доставят в течение 15 минут! Приятного аппетита", preferredStyle: .alert)

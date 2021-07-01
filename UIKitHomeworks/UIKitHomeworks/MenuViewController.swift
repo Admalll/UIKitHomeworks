@@ -9,6 +9,8 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    //2. Создать второй экран, где будет выбор блюда, при выборе пицца переходим на следующий экран, добавить вверх экрана заголовок Food и не должно быть кнопки назад (на navigation баре) (при выборе суши никуда не переходим)
+    
     //MARK: - Public properties
     
     var delegate: OplataDelegate?
