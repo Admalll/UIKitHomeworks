@@ -9,6 +9,10 @@ import UIKit
 
 class PizzaViewController: UIViewController {
     
+    //MARK: - Public properties
+    
+    var delegate: OplataDelegate?
+    
     //MARK: - Visual components
     
     let bbqUIView = UIView()
@@ -100,10 +104,12 @@ class PizzaViewController: UIViewController {
         switch sender {
         case bbqPriceButton:
             let vc = DetailsPizzaViewController(name: "Колбаски Барбекю", image: "bbq", description: "Острая чоризо, соус барбекю, томаты, красный лук, моцарелла, томатный соус", frame: .zero)
+            vc.delegate = delegate
             let navigation = UINavigationController(rootViewController: vc)
             self.navigationController?.present(navigation, animated: true, completion: nil)
         case freshPriceButton:
-            let vc = DetailsPizzaViewController(name: "Колбаски Барбекю", image: "fresh", description: "Острая чоризо, соус барбекю, томаты, красный лук, моцарелла, томатный соус", frame: .zero)
+            let vc = DetailsPizzaViewController(name: "Пепперони фреш", image: "fresh", description: "Пикантная пепперони, увеличенная порция моцареллы, томаты, томатный соус", frame: .zero)
+            vc.delegate = delegate
             let navigation = UINavigationController(rootViewController: vc)
             self.navigationController?.present(navigation, animated: true, completion: nil)
         default:

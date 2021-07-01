@@ -35,15 +35,22 @@ class DetailsPizzaViewController: UIViewController {
     
     //MARK: - Public properties
     
+    var delegate: OplataDelegate?
     var pizzaName: String?
     var pizzaImageName: String?
     var pizzaDescription: String?
+    var items = 1
+    var pizzaPrice = 449
     var currentPrice: Int = 449 {
         didSet {
             busketButton.setTitle("В корзину за \(currentPrice) ₽", for: .normal)
         }
     }
-    var testoType: String = "традиционное"
+    var testoType: String = "традиционное" {
+        didSet {
+            sizeChanged()
+        }
+    }
     var cheeseTopping = false
     var perecTopping = false
     var vetchinaTopping = false
@@ -193,17 +200,20 @@ class DetailsPizzaViewController: UIViewController {
         
     }
     
-    @objc func sizeChanged(sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
+    @objc func sizeChanged() {
+        switch sizeSegment.selectedSegmentIndex {
         case 0:
             self.pizzaParameters = "Маленькая 25см, \(testoType) тесто, 410 г"
             currentPrice = 245
+            pizzaPrice = 245
         case 1:
             self.pizzaParameters = "Средняя 30 см, \(testoType) тесто, 610 г"
             currentPrice = 449
+            pizzaPrice = 449
         case 2:
             self.pizzaParameters = "Большая 35 см, \(testoType) тесто, 800 г"
             currentPrice = 589
+            pizzaPrice = 589
         default:
             break
         }
@@ -221,9 +231,11 @@ class DetailsPizzaViewController: UIViewController {
         cheeseTopping.toggle()
         if cheeseTopping {
             currentPrice += 169
+            items += 1
             cheeseView.layer.borderColor = UIColor.green.cgColor
         } else {
             currentPrice -= 169
+            items -= 1
             cheeseView.layer.borderColor = UIColor.systemGray3.cgColor
         }
     }
@@ -232,9 +244,11 @@ class DetailsPizzaViewController: UIViewController {
         vetchinaTopping.toggle()
         if vetchinaTopping {
             currentPrice += 189
+            items += 1
             vetchinaView.layer.borderColor = UIColor.green.cgColor
         } else {
             currentPrice -= 189
+            items -= 1
             vetchinaView.layer.borderColor = UIColor.systemGray3.cgColor
         }
     }
@@ -243,15 +257,27 @@ class DetailsPizzaViewController: UIViewController {
         perecTopping.toggle()
         if perecTopping {
             currentPrice += 109
+            items += 1
             perecView.layer.borderColor = UIColor.green.cgColor
         } else {
             currentPrice -= 109
+            items -= 1
             perecView.layer.borderColor = UIColor.systemGray3.cgColor
         }
     }
     
     @objc func busketButtonTap(sender: UIButton) {
         let vc = OplataViewController()
+        vc.delegate = delegate
+        vc.isCheese = cheeseTopping
+        vc.isVetchina = vetchinaTopping
+        vc.isPerec = perecTopping
+        vc.price = currentPrice
+        vc.items = items
+        vc.pizzaDescription = pizzaParameters
+        vc.pizzaName = pizzaName ?? ""
+        vc.pizzaImageName = pizzaImageName ?? ""
+        vc.pizzaPrice = pizzaPrice
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

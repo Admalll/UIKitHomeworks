@@ -9,6 +9,10 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    //MARK: - Public properties
+    
+    var delegate: OplataDelegate?
+    
     //MARK: - Visual components
     
     let countryLabel = UILabel()
@@ -99,7 +103,16 @@ class MenuViewController: UIViewController {
     
     @objc func pizzaTap() {
         let vc = PizzaViewController()
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+//MARK: - OplataDelegate
+
+extension MenuViewController: OplataDelegate {
+    func returnFromOplata() {
+        self.navigationController?.popViewController(animated: false)
+    }
 }

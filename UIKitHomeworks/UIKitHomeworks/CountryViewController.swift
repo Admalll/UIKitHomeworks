@@ -49,7 +49,9 @@ class CountryViewController: UIViewController {
     
     func openMenu() {
         let vc = MenuViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil)
     }
 }
 
