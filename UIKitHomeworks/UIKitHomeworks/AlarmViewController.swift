@@ -8,6 +8,8 @@
 import UIKit
 
 class AlarmViewController: UIViewController {
+    
+    //MARK: - UIViewController(AlarmViewController)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,8 @@ class AlarmViewController: UIViewController {
         return .lightContent
     }
 }
+
+//MARK: - Extensions UIView
 
 extension UIView {
 
