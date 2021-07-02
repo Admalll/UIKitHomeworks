@@ -46,7 +46,7 @@ final class MenuViewController: UIViewController {
     
     //MARK: - Public methods
     
-    func setupView() {
+    private func setupView() {
         self.view.backgroundColor = .white
         
         self.view.addSubview(countryLabel)
@@ -103,7 +103,7 @@ final class MenuViewController: UIViewController {
         sushiLabel.frame = CGRect(x: 165, y: 25, width: 100, height: 50)
     }
     
-    @objc func pizzaTap() {
+    @objc private func pizzaTap() {
         let vc = PizzaViewController()
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)

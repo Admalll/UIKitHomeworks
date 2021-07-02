@@ -86,7 +86,7 @@ final class DetailsPizzaViewController: UIViewController {
     
     //MARK: - Public methods
     
-    func setupView() {
+    private func setupView() {
         self.view.backgroundColor = .white
         
         self.view.addSubview(pizzaImageView)
@@ -202,7 +202,7 @@ final class DetailsPizzaViewController: UIViewController {
         
     }
     
-    @objc func sizeChanged() {
+    @objc private func sizeChanged() {
         switch sizeSegment.selectedSegmentIndex {
         case 0:
             self.pizzaParameters = "Маленькая 25см, \(testoType) тесто, 410 г"
@@ -221,7 +221,7 @@ final class DetailsPizzaViewController: UIViewController {
         }
     }
     
-    @objc func testoChangedValue(sender: UISegmentedControl) {
+    @objc private func testoChangedValue(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             self.testoType = "традиционное"
         } else {
@@ -229,7 +229,7 @@ final class DetailsPizzaViewController: UIViewController {
         }
     }
     
-    @objc func cheeseTap(sender: UIView) {
+    @objc private func cheeseTap(sender: UIView) {
         cheeseTopping.toggle()
         if cheeseTopping {
             currentPrice += 169
@@ -242,7 +242,7 @@ final class DetailsPizzaViewController: UIViewController {
         }
     }
     
-    @objc func vetchinaTap(sender: UIView) {
+    @objc private func vetchinaTap(sender: UIView) {
         vetchinaTopping.toggle()
         if vetchinaTopping {
             currentPrice += 189
@@ -255,7 +255,7 @@ final class DetailsPizzaViewController: UIViewController {
         }
     }
     
-    @objc func perecTap(sender: UIView) {
+    @objc private func perecTap(sender: UIView) {
         perecTopping.toggle()
         if perecTopping {
             currentPrice += 109
@@ -268,7 +268,7 @@ final class DetailsPizzaViewController: UIViewController {
         }
     }
     
-    @objc func busketButtonTap(sender: UIButton) {
+    @objc private func busketButtonTap(sender: UIButton) {
         let vc = OplataViewController()
         vc.delegate = delegate
         vc.isCheese = cheeseTopping

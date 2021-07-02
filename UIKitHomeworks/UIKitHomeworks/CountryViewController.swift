@@ -35,7 +35,7 @@ final class CountryViewController: UIViewController {
     
     //MARK: - Public methods
     
-    func setupView() {
+    private func setupView() {
         self.view.backgroundColor = .white
         
         self.view.addSubview(countriesTable)
@@ -47,7 +47,7 @@ final class CountryViewController: UIViewController {
         titleLabel.frame = CGRect(x: 40, y: 100, width: 360, height: 50)
     }
     
-    func openMenu() {
+    private func openMenu() {
         let vc = MenuViewController()
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen

@@ -71,7 +71,7 @@ final class OplataViewController: UIViewController {
     
     //MARK: - Public methods
     
-    func setupView() {
+    private func setupView() {
         self.view.backgroundColor = .white
         
         self.view.addSubview(buyButton)
@@ -150,11 +150,11 @@ final class OplataViewController: UIViewController {
         setupItemsAndPrice()
     }
     
-    func setupItemsAndPrice() {
+    private func setupItemsAndPrice() {
         itemsAndPriceLabel.text = "\(items) Товара за \(price) ₽"
     }
     
-    func setupToppings() {
+    private func setupToppings() {
         if isCheese {
             cheesePriceLabel.text = "169 ₽"
         }
@@ -178,7 +178,7 @@ final class OplataViewController: UIViewController {
     
     // 6. При нажатии на кнопку оплаты показываем алерт об успешной оплате заказа, при нажатии на кнопку ОК мы переходим на экран выбора еды (второй после экрана авторизации)
     
-    @objc func buyButtonTap(sender: UIButton) {
+    @objc private func buyButtonTap(sender: UIButton) {
         let alert = UIAlertController(title: "Заказ оплачен", message: "Ваш заказ доставят в течение 15 минут! Приятного аппетита", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: { [weak self] _ in
             guard let self = self else { return }

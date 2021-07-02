@@ -44,7 +44,7 @@ final class PizzaViewController: UIViewController {
     
     //MARK: - Public methods
     
-    func setupView() {
+    private func setupView() {
         self.view.backgroundColor = .white
         
         self.view.addSubview(bbqUIView)
@@ -102,7 +102,7 @@ final class PizzaViewController: UIViewController {
         freshPriceButton.addTarget(self, action: #selector(openPizzaSetup(sender:)), for: .touchUpInside)
     }
     
-    @objc func openPizzaSetup(sender: UIButton) {
+    @objc private func openPizzaSetup(sender: UIButton) {
         switch sender {
         case bbqPriceButton:
             let vc = DetailsPizzaViewController(name: "Колбаски Барбекю", image: "bbq", description: "Острая чоризо, соус барбекю, томаты, красный лук, моцарелла, томатный соус", frame: .zero)
