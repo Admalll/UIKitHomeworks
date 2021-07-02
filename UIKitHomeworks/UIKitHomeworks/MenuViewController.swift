@@ -13,7 +13,7 @@ final class MenuViewController: UIViewController {
     
     //MARK: - Public properties
     
-    var delegate: OplataDelegate?
+    weak var delegate: OplataDelegate?
     
     //MARK: - Visual components
     

@@ -13,7 +13,7 @@ final class PizzaViewController: UIViewController {
     
     //MARK: - Public properties
     
-    var delegate: OplataDelegate?
+    weak var delegate: OplataDelegate?
     
     //MARK: - Visual components
     
