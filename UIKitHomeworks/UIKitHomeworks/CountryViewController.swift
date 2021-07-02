@@ -7,16 +7,16 @@
 
 import UIKit
 
-class CountryViewController: UIViewController {
+final class CountryViewController: UIViewController {
     
     //MARK: - Visual components
     
-    let countriesTable = UITableView()
-    let titleLabel = UILabel()
+    private let countriesTable = UITableView()
+    private let titleLabel = UILabel()
     
     //MARK: - Public properties
     
-    let countries = ["🇷🇺 Россия", "🇧🇾 Беларусь", "🇬🇧 Великобритания", "🇩🇪 Германия", "🇰🇿 Казахстан", "🇰🇬 Кыргызстан", "🇱🇹 Лива", "🇳🇬 Нигерия", "🇷🇴 Румыния", "🇸🇮 Словения", "🇺🇿 Узбекистан", "🇪🇪 Эстония"]
+    private let countries = ["🇷🇺 Россия", "🇧🇾 Беларусь", "🇬🇧 Великобритания", "🇩🇪 Германия", "🇰🇿 Казахстан", "🇰🇬 Кыргызстан", "🇱🇹 Лива", "🇳🇬 Нигерия", "🇷🇴 Румыния", "🇸🇮 Словения", "🇺🇿 Узбекистан", "🇪🇪 Эстония"]
     
     //MARK: - UIViewController(CountryViewController)
     

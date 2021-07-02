@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PizzaViewController: UIViewController {
+final class PizzaViewController: UIViewController {
     
     // 3. Создать на экране два вида пиццы, с разными названиями и картинками, вверху экране вместо кнопки назад должна быть просто стрелка (как в дизайне), при нажатии на кнопку добавить (+) переходим на следующий экран выбора ингредиентов (отображаем модально)
     
@@ -17,16 +17,16 @@ class PizzaViewController: UIViewController {
     
     //MARK: - Visual components
     
-    let bbqUIView = UIView()
-    let bbqImage = UIImageView()
-    let bbqNameLabel = UILabel()
-    let bbqDescriptionLabel = UILabel()
-    let bbqPriceButton = UIButton()
-    let freshUIView = UIView()
-    let freshImage = UIImageView()
-    let freshNameLabel = UILabel()
-    let freshDescriptionLabel = UILabel()
-    let freshPriceButton = UIButton()
+    private let bbqUIView = UIView()
+    private let bbqImage = UIImageView()
+    private let bbqNameLabel = UILabel()
+    private let bbqDescriptionLabel = UILabel()
+    private let bbqPriceButton = UIButton()
+    private let freshUIView = UIView()
+    private let freshImage = UIImageView()
+    private let freshNameLabel = UILabel()
+    private let freshDescriptionLabel = UILabel()
+    private let freshPriceButton = UIButton()
     
     //MARK: - UIViewController(PizzaViewController)
 

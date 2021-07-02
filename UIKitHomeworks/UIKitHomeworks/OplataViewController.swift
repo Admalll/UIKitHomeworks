@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OplataViewController: UIViewController {
+final class OplataViewController: UIViewController {
     
     // 5. Создать экран оплаты, на котором необходимо спрятать Navigation Bar, а вместо него добавить заголовок оплата, отображаем пиццу и выбранные ингридиенты с предыдущего экрана , добавить выбор способа оплаты (если выбираем наличные отключается свитч оплата картой и наборот)
     
@@ -29,7 +29,7 @@ class OplataViewController: UIViewController {
         }
     }
     
-    var delegate: OplataDelegate?
+    weak var delegate: OplataDelegate?
     var items = 0
     var price = 0
     var pizzaDescription: String = ""
@@ -39,22 +39,21 @@ class OplataViewController: UIViewController {
     
     //MARK: - Visual components
     
-    let itemsAndPriceLabel = UILabel()
-    let pizzaImageView = UIImageView()
-    let pizzaPriceLabel = UILabel()
-    let pizzaNameLabel = UILabel()
-    let pizzaDescriptionLabel = UILabel()
-    let cheeseImageView = UIImageView()
-    let cheesePriceLabel = UILabel()
-    let cheeseNameLabel = UILabel()
-    let vetchinaImageView = UIImageView()
-    let vetchinaPriceLabel = UILabel()
-    let vetchinaNameLabel = UILabel()
-    let perecImageView = UIImageView()
-    let perecPriceLabel = UILabel()
-    let perecNameLabel = UILabel()
-    
-    let buyButton = UIButton()
+    private let itemsAndPriceLabel = UILabel()
+    private let pizzaImageView = UIImageView()
+    private let pizzaPriceLabel = UILabel()
+    private let pizzaNameLabel = UILabel()
+    private let pizzaDescriptionLabel = UILabel()
+    private let cheeseImageView = UIImageView()
+    private let cheesePriceLabel = UILabel()
+    private let cheeseNameLabel = UILabel()
+    private let vetchinaImageView = UIImageView()
+    private let vetchinaPriceLabel = UILabel()
+    private let vetchinaNameLabel = UILabel()
+    private let perecImageView = UIImageView()
+    private let perecPriceLabel = UILabel()
+    private let perecNameLabel = UILabel()
+    private let buyButton = UIButton()
     
     //MARK: - UIViewController(OplataViewController)
     
@@ -190,6 +189,6 @@ class OplataViewController: UIViewController {
     }
 }
 
-protocol OplataDelegate {
+protocol OplataDelegate: AnyObject {
     func returnFromOplata()
 }

@@ -7,37 +7,37 @@
 
 import UIKit
 
-class DetailsPizzaViewController: UIViewController {
+final class DetailsPizzaViewController: UIViewController {
     
     // 4. Передаем картинку и название пиццы с предыдущего экрана, делаем ингредиенты и свитчи, при нажатии на кнопку выбрать переходим на экран оплаты (отображаем в полный экран)
     
     //MARK: - Visual components
     
-    let pizzaImageView = UIImageView()
-    let pizzaNameLabel = UILabel()
-    let pizzaDescriptionLabel = UILabel()
-    let pizzaParametersLabel = UILabel()
-    let sizeSegment = UISegmentedControl(items: ["Маленькая", "Средняя", "Большая"])
-    let testoSegment = UISegmentedControl(items: ["Традиционное", "Тонкое"])
-    let toppingsLabel = UILabel()
-    let toppingsUIView = UIView()
-    let cheeseView = UIView()
-    let cheeseImage = UIImageView()
-    let cheeseLabel = UILabel()
-    let cheesePriceLabel = UILabel()
-    let perecView = UIView()
-    let perecPriceLabel = UILabel()
-    let perecImage = UIImageView()
-    let perecLabel = UILabel()
-    let vetchinaView = UIView()
-    let vetchinaPriceLabel = UILabel()
-    let vetchinaImage = UIImageView()
-    let vetchinaLabel = UILabel()
-    let busketButton = UIButton()
+    private let pizzaImageView = UIImageView()
+    private let pizzaNameLabel = UILabel()
+    private let pizzaDescriptionLabel = UILabel()
+    private let pizzaParametersLabel = UILabel()
+    private let sizeSegment = UISegmentedControl(items: ["Маленькая", "Средняя", "Большая"])
+    private let testoSegment = UISegmentedControl(items: ["Традиционное", "Тонкое"])
+    private let toppingsLabel = UILabel()
+    private let toppingsUIView = UIView()
+    private let cheeseView = UIView()
+    private let cheeseImage = UIImageView()
+    private let cheeseLabel = UILabel()
+    private let cheesePriceLabel = UILabel()
+    private let perecView = UIView()
+    private let perecPriceLabel = UILabel()
+    private let perecImage = UIImageView()
+    private let perecLabel = UILabel()
+    private let vetchinaView = UIView()
+    private let vetchinaPriceLabel = UILabel()
+    private let vetchinaImage = UIImageView()
+    private let vetchinaLabel = UILabel()
+    private let busketButton = UIButton()
     
     //MARK: - Public properties
     
-    var delegate: OplataDelegate?
+    weak var delegate: OplataDelegate?
     var pizzaName: String?
     var pizzaImageName: String?
     var pizzaDescription: String?

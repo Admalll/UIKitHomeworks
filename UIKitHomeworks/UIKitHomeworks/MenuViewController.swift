@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+final class MenuViewController: UIViewController {
     
     //2. Создать второй экран, где будет выбор блюда, при выборе пицца переходим на следующий экран, добавить вверх экрана заголовок Food и не должно быть кнопки назад (на navigation баре) (при выборе суши никуда не переходим)
     
@@ -17,13 +17,13 @@ class MenuViewController: UIViewController {
     
     //MARK: - Visual components
     
-    let countryLabel = UILabel()
-    let shipmentUIView = UIView()
-    let shipmentSegment = UISegmentedControl(items: ["На доставку", "В зале"])
-    let setShipmentAddressButton = UIButton()
-    let advertismentImage = UIImageView()
-    let pizzaImage = UIImageView()
-    let sushiImage = UIImageView()
+    private let countryLabel = UILabel()
+    private let shipmentUIView = UIView()
+    private let shipmentSegment = UISegmentedControl(items: ["На доставку", "В зале"])
+    private let setShipmentAddressButton = UIButton()
+    private let advertismentImage = UIImageView()
+    private let pizzaImage = UIImageView()
+    private let sushiImage = UIImageView()
     
     //MARK: - UIViewController(MenuViewController)
 
