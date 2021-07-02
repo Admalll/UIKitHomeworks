@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlarmViewController: UIViewController {
+final class AlarmViewController: UIViewController {
     
     //MARK: - UIViewController(AlarmViewController)
 
