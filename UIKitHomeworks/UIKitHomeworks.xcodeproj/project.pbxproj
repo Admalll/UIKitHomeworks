@@ -14,6 +14,10 @@
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
 		F577EA46268DEC2000910339 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA45268DEC2000910339 /* TimerViewController.swift */; };
+		F577EA4C268EE59000910339 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA4A268EE59000910339 /* Alarm.storyboard */; };
+		F577EA4E268EE5FA00910339 /* GlobalTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA4D268EE5FA00910339 /* GlobalTime.storyboard */; };
+		F577EA51268EE61A00910339 /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA4F268EE61A00910339 /* Stopwatch.storyboard */; };
+		F577EA53268EE63A00910339 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA52268EE63A00910339 /* Timer.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F577EA45268DEC2000910339 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		F577EA4B268EE59000910339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UIKitHomeworks/Base.lproj/Alarm.storyboard; sourceTree = "<group>"; };
+		F577EA4D268EE5FA00910339 /* GlobalTime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GlobalTime.storyboard; sourceTree = "<group>"; };
+		F577EA50268EE61A00910339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UIKitHomeworks/Base.lproj/Stopwatch.storyboard; sourceTree = "<group>"; };
+		F577EA52268EE63A00910339 /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				F50616CD2680D8040089998C /* AlarmViewController.swift */,
 				F577EA45268DEC2000910339 /* TimerViewController.swift */,
 				F50616CF2680D8040089998C /* Main.storyboard */,
+				F577EA4A268EE59000910339 /* Alarm.storyboard */,
+				F577EA4F268EE61A00910339 /* Stopwatch.storyboard */,
+				F577EA4D268EE5FA00910339 /* GlobalTime.storyboard */,
+				F577EA52268EE63A00910339 /* Timer.storyboard */,
 				F50616D22680D8070089998C /* Assets.xcassets */,
 				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
 				F50616D72680D8070089998C /* Info.plist */,
@@ -127,8 +139,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F577EA4C268EE59000910339 /* Alarm.storyboard in Resources */,
 				F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */,
+				F577EA4E268EE5FA00910339 /* GlobalTime.storyboard in Resources */,
 				F50616D32680D8070089998C /* Assets.xcassets in Resources */,
+				F577EA51268EE61A00910339 /* Stopwatch.storyboard in Resources */,
+				F577EA53268EE63A00910339 /* Timer.storyboard in Resources */,
 				F50616D12680D8040089998C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +180,22 @@
 				F50616D52680D8070089998C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F577EA4A268EE59000910339 /* Alarm.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F577EA4B268EE59000910339 /* Base */,
+			);
+			name = Alarm.storyboard;
+			sourceTree = "<group>";
+		};
+		F577EA4F268EE61A00910339 /* Stopwatch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F577EA50268EE61A00910339 /* Base */,
+			);
+			name = Stopwatch.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
