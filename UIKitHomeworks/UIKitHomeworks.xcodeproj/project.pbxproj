@@ -16,6 +16,9 @@
 		F577EA5E26947FCF00910339 /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA5C26947FCF00910339 /* Onboard.storyboard */; };
 		F577EA612694823E00910339 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA602694823E00910339 /* RegisterViewController.swift */; };
 		F577EA632694824900910339 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA622694824900910339 /* Register.storyboard */; };
+		F577EA6B2694A97D00910339 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA6A2694A97D00910339 /* FriendsViewController.swift */; };
+		F577EA6E2694A99F00910339 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA6D2694A99F00910339 /* Friends.storyboard */; };
+		F577EA712694B5D400910339 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA702694B5D400910339 /* AuthModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F577EA5D26947FCF00910339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UIKitHomeworks/Base.lproj/Onboard.storyboard; sourceTree = "<group>"; };
 		F577EA602694823E00910339 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F577EA622694824900910339 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		F577EA6A2694A97D00910339 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F577EA6D2694A99F00910339 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		F577EA702694B5D400910339 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				F577EA5A26947F8900910339 /* Application */,
 				F577EA5B26947FB100910339 /* Onboard */,
 				F577EA5F2694822800910339 /* Register */,
+				F577EA682694A95400910339 /* Friends */,
 			);
 			path = UIKitHomeworks;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 		F577EA5F2694822800910339 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				F577EA6F2694B5C200910339 /* Model */,
 				F577EA662694851100910339 /* Controller */,
 				F577EA672694851800910339 /* View */,
 			);
@@ -130,6 +138,39 @@
 				F577EA622694824900910339 /* Register.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F577EA682694A95400910339 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6C2694A99200910339 /* View */,
+				F577EA692694A96F00910339 /* Controllers */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		F577EA692694A96F00910339 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6A2694A97D00910339 /* FriendsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F577EA6C2694A99200910339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6D2694A99F00910339 /* Friends.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F577EA6F2694B5C200910339 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA702694B5D400910339 /* AuthModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F577EA6E2694A99F00910339 /* Friends.storyboard in Resources */,
 				F577EA5E26947FCF00910339 /* Onboard.storyboard in Resources */,
 				F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */,
 				F50616D32680D8070089998C /* Assets.xcassets in Resources */,
@@ -205,9 +247,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50616CE2680D8040089998C /* OnboardViewController.swift in Sources */,
+				F577EA6B2694A97D00910339 /* FriendsViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
 				F577EA612694823E00910339 /* RegisterViewController.swift in Sources */,
+				F577EA712694B5D400910339 /* AuthModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
