@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class TextEditorController: UIViewController {
     
     //MARK: - Visual components
     
@@ -173,25 +173,21 @@ final class ViewController: UIViewController {
     }
     
     @objc private func presentTextAlert() {
-        let alert = UIAlertController(title: "Алерт для ввода текста", message: "Введите текст", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: nil)
-        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak self] _ in
-            guard let self = self, let text = alert.textFields?.first?.text else { return }
+        presentAlert(title: "Алерт для ввода текста", message: "Введите текст") { [weak self] (text) in
+            guard let self = self else { return }
             self.mainTextLabel.text = text
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(alert, animated: true)
+        }
     }
 }
 
 //MARK: - extension ViewController: UIPickerViewDataSource
 
-extension ViewController: UIPickerViewDataSource {
-    
+extension TextEditorController: UIPickerViewDataSource {
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
         case colorPicker:
@@ -206,7 +202,7 @@ extension ViewController: UIPickerViewDataSource {
 
 //MARK: - extension ViewController: UIPickerViewDelegate
 
-extension ViewController: UIPickerViewDelegate {
+extension TextEditorController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
         case colorPicker:
@@ -217,7 +213,7 @@ extension ViewController: UIPickerViewDelegate {
             return ""
         }
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case colorPicker:
