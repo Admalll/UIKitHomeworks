@@ -63,7 +63,7 @@ final class RegisterViewController: UIViewController {
 
     //MARK: - IBActions
 
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+    @IBAction private func nextButtonTapped(_ sender: UIButton) {
         guard let name = nameTextfield.text, let age = ageTextfield.text, let nickname = nicknameTextfield.text, let registerText = registerTextField.text else { return }
         if isPhone {
             if model.registerNewUser(user: User(name: name, age: age, nickname: nickname, registrationParameter: .phoneNumber(registerText), id: model.users.count)) {

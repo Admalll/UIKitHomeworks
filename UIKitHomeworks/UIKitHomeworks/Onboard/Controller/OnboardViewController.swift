@@ -10,6 +10,7 @@ import UIKit
 final class OnboardViewController: UIViewController {
 
     //MARK: - Private properties
+    
     private let defaults = UserDefaults.standard
     private var isLogged: Bool {
         get {
@@ -22,6 +23,7 @@ final class OnboardViewController: UIViewController {
     //MARK: - UIViewController
 
     override func loadView() {
+        super.loadView()
         checkIsLoged()
     }
 
