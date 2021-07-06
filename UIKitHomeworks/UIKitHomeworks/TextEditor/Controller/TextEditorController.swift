@@ -173,7 +173,7 @@ final class TextEditorController: UIViewController {
     }
     
     @objc private func presentTextAlert() {
-        presentAlert(title: "Алерт для ввода текста", message: "Введите текст") { [weak self] (text) in
+        presentAlert(title: "Алерт для ввода текста", message: "Введите текст") { [weak self] text in
             guard let self = self else { return }
             self.mainTextLabel.text = text
         }
