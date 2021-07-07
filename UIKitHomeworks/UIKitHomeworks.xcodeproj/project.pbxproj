@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		F50616CA2680D8040089998C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616C92680D8040089998C /* AppDelegate.swift */; };
 		F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CB2680D8040089998C /* SceneDelegate.swift */; };
-		F50616CE2680D8040089998C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* ViewController.swift */; };
+		F50616CE2680D8040089998C /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* OnboardViewController.swift */; };
 		F50616D12680D8040089998C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616CF2680D8040089998C /* Main.storyboard */; };
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
+		F577EA5E26947FCF00910339 /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA5C26947FCF00910339 /* Onboard.storyboard */; };
+		F577EA612694823E00910339 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA602694823E00910339 /* RegisterViewController.swift */; };
+		F577EA632694824900910339 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA622694824900910339 /* Register.storyboard */; };
+		F577EA6B2694A97D00910339 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA6A2694A97D00910339 /* FriendsViewController.swift */; };
+		F577EA6E2694A99F00910339 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F577EA6D2694A99F00910339 /* Friends.storyboard */; };
+		F577EA712694B5D400910339 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA702694B5D400910339 /* AuthModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F50616C62680D8040089998C /* UIKitHomeworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitHomeworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50616C92680D8040089998C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50616CB2680D8040089998C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50616CD2680D8040089998C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50616CD2680D8040089998C /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		F50616D02680D8040089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50616D22680D8070089998C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F577EA5D26947FCF00910339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UIKitHomeworks/Base.lproj/Onboard.storyboard; sourceTree = "<group>"; };
+		F577EA602694823E00910339 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F577EA622694824900910339 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		F577EA6A2694A97D00910339 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F577EA6D2694A99F00910339 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		F577EA702694B5D400910339 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,109 @@
 		F50616C82680D8040089998C /* UIKitHomeworks */ = {
 			isa = PBXGroup;
 			children = (
-				F50616C92680D8040089998C /* AppDelegate.swift */,
-				F50616CB2680D8040089998C /* SceneDelegate.swift */,
-				F50616CD2680D8040089998C /* ViewController.swift */,
-				F50616CF2680D8040089998C /* Main.storyboard */,
-				F50616D22680D8070089998C /* Assets.xcassets */,
-				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
-				F50616D72680D8070089998C /* Info.plist */,
+				F577EA5A26947F8900910339 /* Application */,
+				F577EA5B26947FB100910339 /* Onboard */,
+				F577EA5F2694822800910339 /* Register */,
+				F577EA682694A95400910339 /* Friends */,
 			);
 			path = UIKitHomeworks;
+			sourceTree = "<group>";
+		};
+		F577EA5A26947F8900910339 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F50616C92680D8040089998C /* AppDelegate.swift */,
+				F50616CB2680D8040089998C /* SceneDelegate.swift */,
+				F50616D72680D8070089998C /* Info.plist */,
+				F50616D22680D8070089998C /* Assets.xcassets */,
+				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
+				F50616CF2680D8040089998C /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F577EA5B26947FB100910339 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA64269484ED00910339 /* Controller */,
+				F577EA65269484FF00910339 /* View */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		F577EA5F2694822800910339 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6F2694B5C200910339 /* Model */,
+				F577EA662694851100910339 /* Controller */,
+				F577EA672694851800910339 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F577EA64269484ED00910339 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F50616CD2680D8040089998C /* OnboardViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F577EA65269484FF00910339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA5C26947FCF00910339 /* Onboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F577EA662694851100910339 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA602694823E00910339 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F577EA672694851800910339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA622694824900910339 /* Register.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F577EA682694A95400910339 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6C2694A99200910339 /* View */,
+				F577EA692694A96F00910339 /* Controllers */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		F577EA692694A96F00910339 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6A2694A97D00910339 /* FriendsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F577EA6C2694A99200910339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA6D2694A99F00910339 /* Friends.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F577EA6F2694B5C200910339 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA702694B5D400910339 /* AuthModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +230,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F577EA6E2694A99F00910339 /* Friends.storyboard in Resources */,
+				F577EA5E26947FCF00910339 /* Onboard.storyboard in Resources */,
 				F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */,
 				F50616D32680D8070089998C /* Assets.xcassets in Resources */,
 				F50616D12680D8040089998C /* Main.storyboard in Resources */,
+				F577EA632694824900910339 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50616CE2680D8040089998C /* ViewController.swift in Sources */,
+				F50616CE2680D8040089998C /* OnboardViewController.swift in Sources */,
+				F577EA6B2694A97D00910339 /* FriendsViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
+				F577EA612694823E00910339 /* RegisterViewController.swift in Sources */,
+				F577EA712694B5D400910339 /* AuthModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +272,14 @@
 				F50616D52680D8070089998C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F577EA5C26947FCF00910339 /* Onboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F577EA5D26947FCF00910339 /* Base */,
+			);
+			name = Onboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6HM64TB5U;
-				INFOPLIST_FILE = UIKitHomeworks/Info.plist;
+				INFOPLIST_FILE = UIKitHomeworks/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6HM64TB5U;
-				INFOPLIST_FILE = UIKitHomeworks/Info.plist;
+				INFOPLIST_FILE = UIKitHomeworks/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
