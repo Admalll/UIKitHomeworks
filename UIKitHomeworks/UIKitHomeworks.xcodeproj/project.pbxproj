@@ -15,6 +15,7 @@
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
 		F577EA772695AB2400910339 /* BookReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA762695AB2400910339 /* BookReaderView.swift */; };
 		F577EA7A2695B1F000910339 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA792695B1F000910339 /* Constants.swift */; };
+		F577EA7C2695E80F00910339 /* Textfield+Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA7B2695E80F00910339 /* Textfield+Picker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F577EA762695AB2400910339 /* BookReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReaderView.swift; sourceTree = "<group>"; };
 		F577EA792695B1F000910339 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F577EA7B2695E80F00910339 /* Textfield+Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield+Picker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F577EA792695B1F000910339 /* Constants.swift */,
+				F577EA7B2695E80F00910339 /* Textfield+Picker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				F577EA7A2695B1F000910339 /* Constants.swift in Sources */,
 				F577EA772695AB2400910339 /* BookReaderView.swift in Sources */,
 				F50616CE2680D8040089998C /* BookReaderViewController.swift in Sources */,
+				F577EA7C2695E80F00910339 /* Textfield+Picker.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
 			);

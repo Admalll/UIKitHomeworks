@@ -24,10 +24,16 @@ final class BookReaderView: UIView {
     private let nightThemeLabel = UILabel()
     private let nightThemeSwitcher = UISwitch()
     private let textFontLabel = UILabel()
-    //private let textFontPicker
+    private let textFontPicker = UITextfieldPicker(frame: .zero, items: UIFont.familyNames, placeholder: "Выберите шрифт")
+    private let shareButton = UIButton()
 
     //MARK: - Private properties
+
     private var currentFontWidth = CGFloat(0)
+
+    //MARK: - Public properties
+
+    weak var delegate: BookReaderViewDelegate?
 
     //MARK: - Initializators
 
@@ -57,6 +63,9 @@ final class BookReaderView: UIView {
         setupTextThinButton()
         setupNightThemeLabel()
         setupNightThemeSwitcher()
+        setupTextFontPicker()
+        setupTextFontLabel()
+        setupShareButton()
     }
 
     private func setupTextView() {
@@ -131,7 +140,7 @@ final class BookReaderView: UIView {
 
     private func setupTextThinButton() {
         addSubview(textThinButton)
-        textThinButton.frame = CGRect(x: 100, y: 730, width: 100, height: 30)
+        textThinButton.frame = CGRect(x: 20, y: 730, width: 100, height: 30)
         textThinButton.layer.cornerRadius = 5
         textThinButton.setTitle("a", for: .normal)
         textThinButton.backgroundColor = .link
@@ -141,7 +150,7 @@ final class BookReaderView: UIView {
 
     private func setupTextFatButton() {
         addSubview(textFatButton)
-        textFatButton.frame = CGRect(x: 230, y: 730, width: 100, height: 30)
+        textFatButton.frame = CGRect(x: 150, y: 730, width: 100, height: 30)
         textFatButton.layer.cornerRadius = 5
         textFatButton.setTitle("A", for: .normal)
         textFatButton.backgroundColor = .link
@@ -167,12 +176,53 @@ final class BookReaderView: UIView {
         nightThemeSwitcher.addTarget(self, action: #selector(changeTheme(switcher:)), for: .valueChanged)
     }
 
+    private func setupTextFontPicker() {
+        addSubview(textFontPicker)
+        textFontPicker.frame = CGRect(x: 190, y: 830, width: 200, height: 30)
+        textFontPicker.addTarget(self, action: #selector(textFontChanged), for: .editingDidEnd)
+        textFontPicker.backgroundColor = .link
+        textFontPicker.layer.masksToBounds = true
+        textFontPicker.textAlignment = .center
+        textFontPicker.layer.cornerRadius = 5
+        textFontPicker.textColor = .white
+        textFontPicker.font = UIFont.boldSystemFont(ofSize: 16)
+        textFontPicker.attributedPlaceholder = NSAttributedString(string: textFontPicker.placeholder ?? "",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+    }
+
+    private func setupTextFontLabel() {
+        addSubview(textFontLabel)
+        textFontLabel.text = "Выбор шрифта"
+        textFontLabel.backgroundColor = .link
+        textFontLabel.textColor = .white
+        textFontLabel.layer.masksToBounds = true
+        textFontLabel.layer.cornerRadius = 5
+        textFontLabel.textAlignment = .center
+        textFontLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        textFontLabel.frame = CGRect(x: 20, y: 830, width: 150, height: 30)
+    }
+
     private func setNightTheme() {
         backgroundColor = .black
     }
 
     private func setLightTheme() {
         backgroundColor = .white
+    }
+
+    private func setupShareButton() {
+        addSubview(shareButton)
+        shareButton.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
+        shareButton.frame = CGRect(x: 370, y: 50, width: 50, height: 50)
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
+    }
+
+    @objc private func shareButtonTapped(button: UIButton) {
+        delegate?.openShareController(sharingItems: [textView.text ?? "no text"])
+    }
+
+    @objc private func textFontChanged(sender: UITextField) {
+        textView.font = UIFont(name: sender.text ?? "System", size: textView.font?.pointSize ?? 16)
     }
 
     @objc private func changeTheme(switcher: UISwitch) {
@@ -210,4 +260,8 @@ final class BookReaderView: UIView {
             break
         }
     }
+}
+
+protocol BookReaderViewDelegate: AnyObject {
+    func openShareController(sharingItems: [String])
 }
