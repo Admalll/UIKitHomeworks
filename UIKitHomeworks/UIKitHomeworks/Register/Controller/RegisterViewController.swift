@@ -23,7 +23,7 @@ final class RegisterViewController: UIViewController {
 
     private lazy var textFields = [registerTextField, nicknameTextfield, ageTextfield, nameTextfield]
     private var currentTextFieldResponder: Int?
-    private var model = AuthModel()
+    private var model = Auth()
     private var isPhone = false
 
     //MARK: - UIViewController
@@ -61,30 +61,35 @@ final class RegisterViewController: UIViewController {
         nicknameErrorLabel.isHidden = false
     }
 
+    private func setupFriendsViewController() {
+        let storyboard = UIStoryboard(name: "Friends", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "FriendsTabBarController")
+        navigationController?.pushViewController(vc, animated: true)
+        nicknameErrorLabel.isHidden = true
+    }
+
+    private func registerNewUser(name: String, age: String, nickname: String, registerText: String) -> Bool {
+        if isPhone {
+            if model.registerNewUser(user: User(name: name, age: age, nickname: nickname, registrationParameter: .phoneNumber(registerText), id: model.users.count)) {
+                return true
+            }
+        }
+        if !isPhone {
+            if model.registerNewUser(user: User(name: name, age: age, nickname: nickname, registrationParameter: .emailAddress(registerText), id: model.users.count)) {
+                return true
+            }
+        }
+        return false
+    }
+
     //MARK: - IBActions
 
     @IBAction private func nextButtonTapped(_ sender: UIButton) {
         guard let name = nameTextfield.text, let age = ageTextfield.text, let nickname = nicknameTextfield.text, let registerText = registerTextField.text else { return }
-        if isPhone {
-            if model.registerNewUser(user: User(name: name, age: age, nickname: nickname, registrationParameter: .phoneNumber(registerText), id: model.users.count)) {
-                let storyboard = UIStoryboard(name: "Friends", bundle: nil)
-                let vc = storyboard.instantiateViewController(identifier: "FriendsTabBarController")
-                navigationController?.pushViewController(vc, animated: true)
-                nicknameErrorLabel.isHidden = true
-            }
-            else {
-                setupNicknameError()
-            }
+        if registerNewUser(name: name, age: age, nickname: nickname, registerText: registerText) {
+            setupFriendsViewController()
         } else {
-            if model.registerNewUser(user: User(name: name, age: age, nickname: nickname, registrationParameter: .emailAddress(registerText), id: model.users.count)) {
-                let storyboard = UIStoryboard(name: "Friends", bundle: nil)
-                let vc = storyboard.instantiateViewController(identifier: "FriendsTabBarController")
-                navigationController?.pushViewController(vc, animated: true)
-                nicknameErrorLabel.isHidden = true
-            }
-            else {
-                setupNicknameError()
-            }
+            setupNicknameError()
         }
     }
 

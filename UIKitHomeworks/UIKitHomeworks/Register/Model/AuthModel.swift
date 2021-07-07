@@ -20,7 +20,7 @@ enum RegistationParameter {
     case emailAddress(String)
 }
 
-struct AuthModel {
+struct Auth {
     var users = [User(name: "User", age: "10", nickname: "User", registrationParameter: .emailAddress("user@user.ru"), id: 0)]
     private var userNicknames = ["User"]
 
