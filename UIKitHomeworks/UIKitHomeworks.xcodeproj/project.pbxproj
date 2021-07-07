@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		F50616CA2680D8040089998C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616C92680D8040089998C /* AppDelegate.swift */; };
 		F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CB2680D8040089998C /* SceneDelegate.swift */; };
-		F50616CE2680D8040089998C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* ViewController.swift */; };
+		F50616CE2680D8040089998C /* BookReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50616CD2680D8040089998C /* BookReaderViewController.swift */; };
 		F50616D12680D8040089998C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616CF2680D8040089998C /* Main.storyboard */; };
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
+		F577EA772695AB2400910339 /* BookReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA762695AB2400910339 /* BookReaderView.swift */; };
+		F577EA7A2695B1F000910339 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA792695B1F000910339 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F50616C62680D8040089998C /* UIKitHomeworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitHomeworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50616C92680D8040089998C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50616CB2680D8040089998C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50616CD2680D8040089998C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50616CD2680D8040089998C /* BookReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReaderViewController.swift; sourceTree = "<group>"; };
 		F50616D02680D8040089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50616D22680D8070089998C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F577EA762695AB2400910339 /* BookReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReaderView.swift; sourceTree = "<group>"; };
+		F577EA792695B1F000910339 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		F50616C82680D8040089998C /* UIKitHomeworks */ = {
 			isa = PBXGroup;
 			children = (
+				F577EA782695B1E600910339 /* Helpers */,
+				F577EA722695AAE700910339 /* Application */,
+				F577EA732695AB0100910339 /* BookReader */,
+			);
+			path = UIKitHomeworks;
+			sourceTree = "<group>";
+		};
+		F577EA722695AAE700910339 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				F50616C92680D8040089998C /* AppDelegate.swift */,
 				F50616CB2680D8040089998C /* SceneDelegate.swift */,
-				F50616CD2680D8040089998C /* ViewController.swift */,
 				F50616CF2680D8040089998C /* Main.storyboard */,
 				F50616D22680D8070089998C /* Assets.xcassets */,
 				F50616D42680D8070089998C /* LaunchScreen.storyboard */,
 				F50616D72680D8070089998C /* Info.plist */,
 			);
-			path = UIKitHomeworks;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F577EA732695AB0100910339 /* BookReader */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA752695AB1100910339 /* View */,
+				F577EA742695AB0B00910339 /* Controller */,
+			);
+			path = BookReader;
+			sourceTree = "<group>";
+		};
+		F577EA742695AB0B00910339 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F50616CD2680D8040089998C /* BookReaderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F577EA752695AB1100910339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA762695AB2400910339 /* BookReaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F577EA782695B1E600910339 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F577EA792695B1F000910339 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50616CE2680D8040089998C /* ViewController.swift in Sources */,
+				F577EA7A2695B1F000910339 /* Constants.swift in Sources */,
+				F577EA772695AB2400910339 /* BookReaderView.swift in Sources */,
+				F50616CE2680D8040089998C /* BookReaderViewController.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6HM64TB5U;
-				INFOPLIST_FILE = UIKitHomeworks/Info.plist;
+				INFOPLIST_FILE = UIKitHomeworks/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6HM64TB5U;
-				INFOPLIST_FILE = UIKitHomeworks/Info.plist;
+				INFOPLIST_FILE = UIKitHomeworks/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
