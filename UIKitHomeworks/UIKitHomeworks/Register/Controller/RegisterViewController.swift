@@ -12,12 +12,12 @@ final class RegisterViewController: UIViewController {
 
     //MARK: - IBOutlets
 
-    @IBOutlet weak var registerLabel: UILabel!
-    @IBOutlet weak var registerTextField: UITextField!
-    @IBOutlet weak var nicknameTextfield: UITextField!
-    @IBOutlet weak var ageTextfield: UITextField!
-    @IBOutlet weak var nameTextfield: UITextField!
-    @IBOutlet weak var nicknameErrorLabel: UILabel!
+    @IBOutlet private weak var registerLabel: UILabel!
+    @IBOutlet private weak var registerTextField: UITextField!
+    @IBOutlet private weak var nicknameTextfield: UITextField!
+    @IBOutlet private weak var ageTextfield: UITextField!
+    @IBOutlet private weak var nameTextfield: UITextField!
+    @IBOutlet private weak var nicknameErrorLabel: UILabel!
 
     //MARK: - Private properties
 
