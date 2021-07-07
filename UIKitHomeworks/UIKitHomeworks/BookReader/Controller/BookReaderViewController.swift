@@ -24,6 +24,10 @@ final class BookReaderViewController: UIViewController {
         super.viewDidLoad()
         bookReaderView.delegate = self
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        resignFirstResponder()
+    }
 }
 
 //MARK: - BookReaderViewDelegate
