@@ -13,7 +13,7 @@
 		F50616D12680D8040089998C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616CF2680D8040089998C /* Main.storyboard */; };
 		F50616D32680D8070089998C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50616D22680D8070089998C /* Assets.xcassets */; };
 		F50616D62680D8070089998C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50616D42680D8070089998C /* LaunchScreen.storyboard */; };
-		F577EA832696F8CD00910339 /* TimeInterval+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA822696F8CD00910339 /* TimeInterval+.swift */; };
+		F577EA832696F8CD00910339 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA822696F8CD00910339 /* TimeInterval+Extension.swift */; };
 		F577EA8526970ED100910339 /* UIArrengedViewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EA8426970ED100910339 /* UIArrengedViewsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		F50616D22680D8070089998C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50616D52680D8070089998C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50616D72680D8070089998C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F577EA822696F8CD00910339 /* TimeInterval+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+.swift"; sourceTree = "<group>"; };
+		F577EA822696F8CD00910339 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		F577EA8426970ED100910339 /* UIArrengedViewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIArrengedViewsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +107,7 @@
 		F577EA812696F89C00910339 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F577EA822696F8CD00910339 /* TimeInterval+.swift */,
+				F577EA822696F8CD00910339 /* TimeInterval+Extension.swift */,
 				F577EA8426970ED100910339 /* UIArrengedViewsView.swift */,
 			);
 			path = Helpers;
@@ -184,7 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50616CE2680D8040089998C /* StopwatchController.swift in Sources */,
-				F577EA832696F8CD00910339 /* TimeInterval+.swift in Sources */,
+				F577EA832696F8CD00910339 /* TimeInterval+Extension.swift in Sources */,
 				F577EA8526970ED100910339 /* UIArrengedViewsView.swift in Sources */,
 				F50616CA2680D8040089998C /* AppDelegate.swift in Sources */,
 				F50616CC2680D8040089998C /* SceneDelegate.swift in Sources */,

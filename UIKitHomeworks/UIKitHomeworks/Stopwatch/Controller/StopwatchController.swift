@@ -22,21 +22,15 @@ final class StopwatchViewController: UIViewController {
     private var currentTimeInterval = TimeInterval()
     private var currentLap = 0
 
-    //MARK: - UIViewController
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     //MARK: - IBActions
 
-    @IBAction private func startButtonTapped(_ sender: UIButton) {
+    @IBAction private func startButtonAction(_ sender: UIButton) {
         isTimerActive.toggle()
         updateStartButton()
         setupTimer()
     }
 
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
+    @IBAction func resetButtonAction(_ sender: UIButton) {
         arrangedViewsView.subviews.forEach { $0.removeFromSuperview() }
         currentLap = 0
     }
@@ -44,11 +38,7 @@ final class StopwatchViewController: UIViewController {
     //MARK: - Private methods
 
     private func updateStartButton() {
-        if isTimerActive {
-            startButton.setTitle("STOP", for: .normal)
-        } else {
-            startButton.setTitle("START", for: .normal)
-        }
+        isTimerActive ? startButton.setTitle("STOP", for: .normal) : startButton.setTitle("START", for: .normal)
     }
 
     private func setupTimer() {
